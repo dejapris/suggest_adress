@@ -1,0 +1,38 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.twitter-typeahead, .twitter-typeahead .tt-hint, .twitter-typeahead .tt-query {
+  width: 100%;
+}
+.twitter-typeahead .tt-dropdown-menu {
+  min-width: 100%;
+  width: 150%;
+}
+.proposal {
+  text-transform: uppercase;
+}
+.proposal .value {
+  font-weight: bold;	
+}
+.proposal .details {
+  font-size: 80%;
+}
+.proposal .score {
+  font-size: 70%;
+}
+input {
+  text-transform: uppercase;
+}
+.proposal.iconized {
+  padding-right: 48px;
+  background: transparent no-repeat center right;
+}
+.proposal.iconized.adresse {
+  background-image: url('../img/address.png');
+}
+.proposal.iconized.city {
+  background-image: url('../img/city.png');
+}
