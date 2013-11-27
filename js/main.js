@@ -63,10 +63,10 @@
             for ( var i = 0; i < hitsArray.length; i++) {
               var hit = hitsArray[i];
               var datum = {
-                value : (streetNumber + ' ' + hit._source.ST_NAME).trim(),
-                tokens : hit._source.ST_NAME.split(' '),
+                value : (streetNumber + ' ' + hit._source.VOIE).trim(),
+                tokens : hit._source.VOIE.split(' '),
                 streetNumber : streetNumber,
-                streetName : hit._source.ST_NAME,
+                streetName : hit._source.VOIE,
                 townName : hit._source.L_TOWNNAME,
                 postalCode : hit._source.L_POSTCODE,
                 score : hit._score,
