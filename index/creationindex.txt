@@ -1,3 +1,79 @@
-# robotstxt.org/
 
-User-agent: *
+{
+"settings": { 
+    "analysis": { 
+        "filter": { 
+            "edge_filter": { 
+                "type": "edgeNGram", 
+                "side": "front", 
+                "min_gram": "2", 
+                "max_gram": "20" 
+            },
+            "synonym" : { 
+                "type" : "synonym", 
+                "synonyms_path" : "synonyms_fr.txt"
+            } 
+        }, 
+        "analyzer": { 
+            "index_analyzer": { 
+                "type": "custom", 
+                "tokenizer": "standard", 
+                "filter"   : ["standard", "lowercase", "asciifolding", "edge_filter"] 
+            },
+            "search_analyzer": { 
+                "type": "custom", 
+                "tokenizer": "standard", 
+                "filter"   : ["standard", "lowercase", "asciifolding","synonym"] 
+            } 
+        } 
+    }  
+    }, 
+    "mappings": { 
+        "adresse": { 
+            "properties": { 
+				"OBJECTID" : {"type":"string"},        
+                "VOIE" : {"type":"string","index_analyzer":"index_analyzer","search_analyzer":"search_analyzer"},         
+                "TOWNNAME" : {"type":"string"},        
+                "POSTCODE" : {"type":"string"},
+                "ADMIN1":    {"type":"string"},
+                "ADMIN2":    {"type":"string"},
+                "ADMIN3":    {"type":"string"},
+                "X":        {"type":"string"},
+                "Y":        {"type":"string"}
+            } 
+        },
+        "ville": { 
+            "properties": { 
+				"OBJECTID" : {"type":"string"},        
+                "TOWNNAME" : { 
+                    "type" : "multi_field", 
+                    "fields" : { 
+                        "TOWNNAME": {"type":"string","index_analyzer":"index_analyzer","search_analyzer":"search_analyzer"}, 
+                        "origin": {"type":"string"} 
+                    } 
+                },        
+                "POSTCODE" : {"type":"string"},
+                "ADMIN1":    {"type":"string"},
+                "ADMIN2":    {"type":"string"},
+                "ADMIN3":    {"type":"string"},
+                "X":        {"type":"string"},
+                "Y":        {"type":"string"}
+            } 
+        }, 
+        "poi": { 
+            "properties": { 
+				"OBJECTID" : {"type":"string"},        
+                "VOIE" : {"type":"string","index_analyzer":"index_analyzer","search_analyzer":"search_analyzer"},         
+                "TOWNNAME" : {"type":"string"},        
+                "POSTCODE" : {"type":"string"},
+                "ADMIN1":    {"type":"string"},
+                "ADMIN2":    {"type":"string"},
+                "ADMIN3":    {"type":"string"},
+                "X":        {"type":"string"},
+                "Y":        {"type":"string"}
+            } 
+        } 
+		
+    } 
+}
+} 
