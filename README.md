@@ -7,4 +7,4 @@ Le code fourni permet d'interroger un index Elasticsearch en utilisant le framew
 
 Le [wiki](https://github.com/dejapris/suggest_adress/wiki) détaille la configuration d'Elasticsearch nécessaire.
 
-Le code de création de l'index est disponible dans le répertoire index/creationindex.txt
+Le code de création de l'index est disponible dans le répertoire index/[creationindex.txt](https://github.com/dejapris/suggest_adress/blob/master/index/creationindex.txt)
