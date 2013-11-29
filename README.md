@@ -1,9 +1,10 @@
 suggest adress
 ==============
 
-Complétion d'adresse avec elasticsearch
+Un exemple de complétion d'adresse avec elasticsearch.
 
 Le code fourni permet d'interroger un index Elasticsearch en utilisant le framework twitter Bootstrap 3.0 et le composant d'autocomplétion typeahead.
+
 
 Le [wiki](https://github.com/dejapris/suggest_adress/wiki) détaille la configuration d'Elasticsearch nécessaire.
 
